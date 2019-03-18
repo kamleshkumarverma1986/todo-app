@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 export const AddTodoForm = (props) => {
     return (
-        <input type="text" placeholder="Enter Todo Item" onKeyUp={props.inputChange}/>
+        <input type="text" placeholder="Enter Todo Item" onKeyUp={props.inputChange} />
     );
 }
  

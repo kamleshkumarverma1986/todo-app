@@ -3,6 +3,7 @@ export const filterLinkReducer = (state = [
     { filterName: "Completed", active: false },
     { filterName: "Pending", active: false }
 ], action) => {
+    // eslint-disable-next-line default-case
     switch (action.type) {
         case "FILTER_CHANGE":
             state = state.map((filterObj) => {

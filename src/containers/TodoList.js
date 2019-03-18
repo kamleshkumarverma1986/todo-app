@@ -15,21 +15,16 @@ class TodoList extends Component {
 
     getFilteredTodoList = () => {
         const activeFilter = this.props.filters.find(filter => filter.active === true);
+        // eslint-disable-next-line default-case
         switch (activeFilter.filterName) {
             case "Completed":
                 return this.props.todoItems.filter((item) => {
-                    if (item.completed) {
-                        return item;
-                    }
+                    return item.completed === true;
                 });
-                break;
             case "Pending":
                 return this.props.todoItems.filter((item) => {
-                    if (!item.completed) {
-                        return item;
-                    }
+                    return item.completed === false;
                 });
-                break;
         }
         return this.props.todoItems;
     }

@@ -6,6 +6,7 @@ let initialState = [
     }
 ];
 export const todoItemReducer = (state= initialState, action) => {
+    // eslint-disable-next-line default-case
     switch (action.type) {
         case "ADD_ITEM":
             state = [ ...state, {
