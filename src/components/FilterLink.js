@@ -6,9 +6,7 @@ export const FilterLink = (props) => {
         color: props.filter.active ? "white": "black"
     }
     return (
-        <React.Fragment>
-            <p onClick={() => props.filterChange(props.filter)} style={linkStyle}>{props.filter.filterName}</p>
-        </React.Fragment>
+        <p onClick={() => props.filterChange(props.filter)} style={linkStyle}>{props.filter.filterName}</p>
     );
 }
  

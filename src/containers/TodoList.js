@@ -14,7 +14,7 @@ class TodoList extends Component {
     }
 
     getFilteredTodoList = () => {
-        const activeFilter = this.props.filters.find( filter => filter.active === true );
+        const activeFilter = this.props.filters.find(filter => filter.active === true);
         switch (activeFilter.filterName) {
             case "Completed":
                 return this.props.todoItems.filter((item) => {
@@ -35,7 +35,6 @@ class TodoList extends Component {
     }
 
     render() {
-        console.log("This is the activeFilter ", this.props.activeFilter);
         const filteredTodoList = this.getFilteredTodoList();
         return (
             <div className="todolist">

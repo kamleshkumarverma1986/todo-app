@@ -6,6 +6,10 @@
   background-color: rosybrown;
   border: 1px solid blanchedalmond;
   padding: 15px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 48px;
 }
 
 .addtodo input {
@@ -13,31 +17,46 @@
   height: 20px;
 }
 
-
 .todolist {
-  background-color: tomato;
-  border: 1px solid blanchedalmond;
-  padding: 15px;
+  padding: 20px;
+  overflow: auto;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 .todolist .todoitem {
-  background-color: white;
-  color: black;
-  padding: 10px;
   border: 1px solid black;
+  margin: 10px;
+  display: flex;
+}
+
+.todolist .todoitem .content-area {
+  background-color: yellowgreen;
+  padding: 10px;
+
+  flex-basis: 90%;
 }
 
 .todolist .todoitem .cross-mark {
  color: red;
- display: inline;
- float: right;
  cursor: pointer;
+ height: 38px;
+ display: flex;
+ flex-basis: 10%;
+}
+
+.todolist .todoitem .cross-mark p {
+  margin: auto;
 }
 
 .filter {
   display: flex;
   background-color: chocolate;
   justify-content: space-between;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 48px;
 }
 
 .filter p {

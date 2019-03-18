@@ -6,7 +6,7 @@ import { addItem } from '../actions/todoItemActions';
 class AddTodo extends Component {
 
     inputChangeHandler = (event) => {
-        if (event.key === "Enter") {
+        if (event.key === "Enter" && event.target.value) {
             this.props.addItem(event.target.value);
             event.target.value = "";
         }
