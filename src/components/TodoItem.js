@@ -7,7 +7,7 @@ export const TodoItem = (props) => {
     return (
         <div className="todoitem">
             <div className="content-area" onClick={() => props.toggleItem(props.item.id)}>
-                <span style={itemStyle}>{props.item.text}</span>
+                <span style={itemStyle}>{props.item.title}</span>
             </div>
             <div className="cross-mark" onClick={() => props.deleteItem(props.item.id)}>
                 <p>X</p>

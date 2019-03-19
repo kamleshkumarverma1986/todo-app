@@ -1,7 +1,7 @@
 let todoItemId = 1;
 
-export const addItem = (text) => {
-    return { type: "ADD_ITEM", id: ++todoItemId, text: text, completed: false };
+export const addItem = (title) => {
+    return { type: "ADD_ITEM", id: ++todoItemId, title, completed: false };
 }
 
 export const toggleItem = (itemId) => {

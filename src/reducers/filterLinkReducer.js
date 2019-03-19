@@ -1,8 +1,6 @@
-export const filterLinkReducer = (state = [
-    { filterName: "Show All", active: true },
-    { filterName: "Completed", active: false },
-    { filterName: "Pending", active: false }
-], action) => {
+import { filters } from '../initialState';
+
+export const filterLinkReducer = (state = filters, action) => {
     // eslint-disable-next-line default-case
     switch (action.type) {
         case "FILTER_CHANGE":
